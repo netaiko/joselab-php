@@ -1,0 +1,9 @@
+/vendor/
+/.idea/
+/composer.phar
+/.phpunit.result.cache
+
+.env
+.env.local
+
+docker-compose.override.yml
