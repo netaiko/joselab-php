@@ -1,13 +1,21 @@
 {
     "name": "jose/joselab-php",
-    "description": "Personal PHP laboratory for coding exercises, algorithms, and problem solving.",
+    "description": "Personal PHP laboratory for working on algorithms, data structures, and standalone problem-solving tasks.",
     "type": "project",
     "require": {
         "php": "^8.3"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
     "autoload": {
         "psr-4": {
             "JoseLab\\Php\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JoseLab\\Php\\Tests\\": "tests/"
         }
     }
 }

@@ -2,6 +2,7 @@
 /.idea/
 /composer.phar
 /.phpunit.result.cache
+/.phpunit.cache/
 
 .env
 .env.local

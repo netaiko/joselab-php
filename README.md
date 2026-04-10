@@ -7,8 +7,8 @@ A personal PHP laboratory for working on algorithms, data structures, and standa
 - Docker for quick start
 - Composer autoloading
 - Independent and self-contained implementations
+- PHPUnit testing setup
 - Simple runner script
-- Example implementations of common problems
 
 ## Quick start
 
@@ -30,6 +30,12 @@ docker compose exec app composer install
 docker compose exec app php bin/run.php
 ```
 
+### 4. Run tests
+
+```bash
+docker compose exec app vendor/bin/phpunit
+```
+
 ## Project structure
 
 ```text
@@ -38,7 +44,11 @@ joselab-php/
 │   └── run.php
 ├── src/
 │   └── Implementations/
+├── tests/
+│   └── Implementations/
 ├── composer.json
+├── composer.lock
+├── phpunit.xml
 ├── docker-compose.yml
 ├── Dockerfile
 └── README.md
@@ -48,7 +58,7 @@ joselab-php/
 
 1. Create a new class in `src/Implementations`.
 2. Use the namespace `JoseLab\Php\Implementations`.
-3. Add a call in `bin/run.php` if you want to execute it from the main runner.
+3. Create a corresponding test in `tests/Implementations`.
 4. Run:
 
 ```bash
@@ -69,6 +79,12 @@ Run the main runner:
 docker compose exec app php bin/run.php
 ```
 
+Run tests:
+
+```bash
+docker compose exec app vendor/bin/phpunit
+```
+
 Stop containers:
 
 ```bash
@@ -77,4 +93,4 @@ docker compose down
 
 ## Notes
 
-This repository is intentionally flexible. Each file is self-contained and may represent a standalone implementation, without dependencies on other parts of the codebase.
+This repository is intentionally flexible. Each implementation is self-contained and may explore a specific concept, approach, or problem without dependencies on other parts of the codebase.
