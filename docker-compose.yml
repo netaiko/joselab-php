@@ -8,5 +8,11 @@ services:
     working_dir: /var/www
     volumes:
       - ./:/var/www
+      - ./docker/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     stdin_open: true
     tty: true
+    environment:
+      PHP_IDE_CONFIG: "serverName=joselab-php"
+      XDEBUG_MODE: debug,develop
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
