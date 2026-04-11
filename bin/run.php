@@ -7,6 +7,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\Palindrome;
+use JoseLab\Php\Implementations\RemoveDuplicates;
 use JoseLab\Php\Implementations\ReverseString;
 use JoseLab\Php\Implementations\TwoSum;
 
@@ -47,3 +48,8 @@ title('Reverse String');
 $value = 'stressed';
 line('Input', ['value' => $value]);
 line('Output', ReverseString::reverse($value));
+
+title('Remove Duplicates');
+$items = ['java', 'php', 'java', 'python', 'php', 'go'];
+line('Input', ['items' => $items]);
+line('Output', RemoveDuplicates::removeDuplicates($items));
