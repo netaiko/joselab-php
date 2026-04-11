@@ -7,6 +7,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\Palindrome;
+use JoseLab\Php\Implementations\ReverseString;
 use JoseLab\Php\Implementations\TwoSum;
 
 function title(string $text): void
@@ -41,3 +42,8 @@ title('Frequency Count');
 $items = ['php', 'java', 'php', 'python', 'java', 'php'];
 line('Input', ['items' => $items]);
 line('Output', FrequencyCount::count($items));
+
+title('Reverse String');
+$value = 'stressed';
+line('Input', ['value' => $value]);
+line('Output', ReverseString::reverse($value));
