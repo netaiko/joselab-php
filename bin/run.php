@@ -6,6 +6,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
+use JoseLab\Php\Implementations\MaxMin;
 use JoseLab\Php\Implementations\Palindrome;
 use JoseLab\Php\Implementations\RemoveDuplicates;
 use JoseLab\Php\Implementations\ReverseString;
@@ -53,3 +54,8 @@ title('Remove Duplicates');
 $items = ['java', 'php', 'java', 'python', 'php', 'go'];
 line('Input', ['items' => $items]);
 line('Output', RemoveDuplicates::removeDuplicates($items));
+
+title('Max Min');
+$numbers = [5, 2, 5, -1, -3, 0, 9, 8, 4, 2];
+line('Input', ['numbers' => $numbers]);
+line('Output', MaxMin::find($numbers));
