@@ -9,6 +9,7 @@ use JoseLab\Php\Implementations\FirstNonRepeatingCharacter;
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\MaxMin;
+use JoseLab\Php\Implementations\MergeTwoSortedArrays;
 use JoseLab\Php\Implementations\Palindrome;
 use JoseLab\Php\Implementations\RemoveDuplicates;
 use JoseLab\Php\Implementations\ReverseArray;
@@ -57,6 +58,12 @@ title('Reverse Array');
 $items = [1, 2, 3, 4];
 line('Input', ['items' => $items]);
 line('Output', ReverseArray::reverse($items));
+
+title('Merge Two Sorted Arrays');
+$left = [1, 3, 5];
+$right = [2, 4, 6];
+line('Input', ['left' => $left, 'right' => $right]);
+line('Output', MergeTwoSortedArrays::merge($left, $right));
 
 title('Remove Duplicates');
 $items = ['java', 'php', 'java', 'python', 'php', 'go'];
