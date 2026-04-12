@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use JoseLab\Php\Implementations\BasicStringOperations;
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\MaxMin;
@@ -59,3 +60,8 @@ title('Max Min');
 $numbers = [5, 2, 5, -1, -3, 0, 9, 8, 4, 2];
 line('Input', ['numbers' => $numbers]);
 line('Output', MaxMin::find($numbers));
+
+title('Basic String Operations');
+$text = 'Hello World 123!';
+line('Input', ['text' => $text]);
+line('Output', BasicStringOperations::analyse($text));
