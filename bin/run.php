@@ -11,6 +11,7 @@ use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\MaxMin;
 use JoseLab\Php\Implementations\Palindrome;
 use JoseLab\Php\Implementations\RemoveDuplicates;
+use JoseLab\Php\Implementations\ReverseArray;
 use JoseLab\Php\Implementations\ReverseString;
 use JoseLab\Php\Implementations\TwoSum;
 
@@ -51,6 +52,11 @@ title('Reverse String');
 $value = 'stressed';
 line('Input', ['value' => $value]);
 line('Output', ReverseString::reverse($value));
+
+title('Reverse Array');
+$items = [1, 2, 3, 4];
+line('Input', ['items' => $items]);
+line('Output', ReverseArray::reverse($items));
 
 title('Remove Duplicates');
 $items = ['java', 'php', 'java', 'python', 'php', 'go'];
