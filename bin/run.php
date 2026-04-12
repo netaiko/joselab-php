@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use JoseLab\Php\Implementations\BasicStringOperations;
+use JoseLab\Php\Implementations\FirstNonRepeatingCharacter;
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\MaxMin;
@@ -65,3 +66,8 @@ title('Basic String Operations');
 $text = 'Hello World 123!';
 line('Input', ['text' => $text]);
 line('Output', BasicStringOperations::analyse($text));
+
+title('First Non-Repeating Character');
+$value = 'swiss';
+line('Input', ['value' => $value]);
+line('Output', FirstNonRepeatingCharacter::find($value));
