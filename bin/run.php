@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use JoseLab\Php\Implementations\BasicStringOperations;
+use JoseLab\Php\Implementations\BestTimeToBuyAndSellStock;
 use JoseLab\Php\Implementations\FirstNonRepeatingCharacter;
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
@@ -82,6 +83,11 @@ $numbers = [2, 1, 5, 1, 3, 2];
 $windowSize = 3;
 line('Input', ['numbers' => $numbers, 'windowSize' => $windowSize]);
 line('Output', SlidingWindowMaximumSum::find($numbers, $windowSize));
+
+title('Best Time To Buy And Sell Stock');
+$prices = [7, 1, 5, 3, 6, 4];
+line('Input', ['prices' => $prices]);
+line('Output', BestTimeToBuyAndSellStock::maxProfit($prices));
 
 title('Valid Parentheses');
 $value = '([{}])';
