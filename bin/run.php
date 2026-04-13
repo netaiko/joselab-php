@@ -14,6 +14,7 @@ use JoseLab\Php\Implementations\Palindrome;
 use JoseLab\Php\Implementations\RemoveDuplicates;
 use JoseLab\Php\Implementations\ReverseArray;
 use JoseLab\Php\Implementations\ReverseString;
+use JoseLab\Php\Implementations\SlidingWindowMaximumSum;
 use JoseLab\Php\Implementations\TwoSum;
 
 function title(string $text): void
@@ -74,6 +75,12 @@ title('Max Min');
 $numbers = [5, 2, 5, -1, -3, 0, 9, 8, 4, 2];
 line('Input', ['numbers' => $numbers]);
 line('Output', MaxMin::find($numbers));
+
+title('Sliding Window Maximum Sum');
+$numbers = [2, 1, 5, 1, 3, 2];
+$windowSize = 3;
+line('Input', ['numbers' => $numbers, 'windowSize' => $windowSize]);
+line('Output', SlidingWindowMaximumSum::find($numbers, $windowSize));
 
 title('Basic String Operations');
 $text = 'Hello World 123!';
