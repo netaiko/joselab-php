@@ -16,6 +16,7 @@ use JoseLab\Php\Implementations\ReverseArray;
 use JoseLab\Php\Implementations\ReverseString;
 use JoseLab\Php\Implementations\SlidingWindowMaximumSum;
 use JoseLab\Php\Implementations\TwoSum;
+use JoseLab\Php\Implementations\ValidParentheses;
 
 function title(string $text): void
 {
@@ -81,6 +82,11 @@ $numbers = [2, 1, 5, 1, 3, 2];
 $windowSize = 3;
 line('Input', ['numbers' => $numbers, 'windowSize' => $windowSize]);
 line('Output', SlidingWindowMaximumSum::find($numbers, $windowSize));
+
+title('Valid Parentheses');
+$value = '([{}])';
+line('Input', ['value' => $value]);
+line('Output', ValidParentheses::isValid($value));
 
 title('Basic String Operations');
 $text = 'Hello World 123!';
