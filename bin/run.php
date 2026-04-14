@@ -10,6 +10,7 @@ use JoseLab\Php\Implementations\FirstNonRepeatingCharacter;
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\JumpGame;
+use JoseLab\Php\Implementations\LongestSubstringWithoutRepeatingCharacters;
 use JoseLab\Php\Implementations\MaxMin;
 use JoseLab\Php\Implementations\MergeTwoSortedArrays;
 use JoseLab\Php\Implementations\Palindrome;
@@ -94,6 +95,11 @@ title('Jump Game');
 $steps = [2, 3, 1, 1, 4];
 line('Input', ['steps' => $steps]);
 line('Output', JumpGame::canJump($steps));
+
+title('Longest Substring Without Repeating Characters');
+$text = 'abcabcbb';
+line('Input', ['text' => $text]);
+line('Output', LongestSubstringWithoutRepeatingCharacters::length($text));
 
 title('Valid Parentheses');
 $value = '([{}])';
