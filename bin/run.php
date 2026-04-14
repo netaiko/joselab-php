@@ -13,6 +13,7 @@ use JoseLab\Php\Implementations\JumpGame;
 use JoseLab\Php\Implementations\LongestSubstringWithoutRepeatingCharacters;
 use JoseLab\Php\Implementations\MaxMin;
 use JoseLab\Php\Implementations\MergeTwoSortedArrays;
+use JoseLab\Php\Implementations\MinimumSizeSubarraySum;
 use JoseLab\Php\Implementations\Palindrome;
 use JoseLab\Php\Implementations\RemoveDuplicates;
 use JoseLab\Php\Implementations\ReverseArray;
@@ -100,6 +101,12 @@ title('Longest Substring Without Repeating Characters');
 $text = 'abcabcbb';
 line('Input', ['text' => $text]);
 line('Output', LongestSubstringWithoutRepeatingCharacters::length($text));
+
+title('Minimum Size Subarray Sum');
+$target = 7;
+$numbers = [2, 3, 1, 2, 4, 3];
+line('Input', ['target' => $target, 'numbers' => $numbers]);
+line('Output', MinimumSizeSubarraySum::findLength($target, $numbers));
 
 title('Valid Parentheses');
 $value = '([{}])';
