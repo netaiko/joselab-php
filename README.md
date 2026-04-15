@@ -79,10 +79,16 @@ Run the main runner:
 docker compose exec app php bin/run.php
 ```
 
-Run tests:
+Run all tests:
 
 ```bash
 docker compose exec app vendor/bin/phpunit
+```
+
+Run a specific test file example:
+
+```bash
+docker compose exec app vendor/bin/phpunit tests/Implementations/MinimumSizeSubArraySumTest.php
 ```
 
 Stop containers:
