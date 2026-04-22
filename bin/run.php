@@ -14,6 +14,7 @@ use JoseLab\Php\Implementations\LongestSubstringWithoutRepeatingCharacters;
 use JoseLab\Php\Implementations\MaxMin;
 use JoseLab\Php\Implementations\MergeTwoSortedArrays;
 use JoseLab\Php\Implementations\MinimumSizeSubarraySum;
+use JoseLab\Php\Implementations\MissingNumber;
 use JoseLab\Php\Implementations\Palindrome;
 use JoseLab\Php\Implementations\RemoveDuplicates;
 use JoseLab\Php\Implementations\ReverseArray;
@@ -122,3 +123,9 @@ title('First Non-Repeating Character');
 $value = 'swiss';
 line('Input', ['value' => $value]);
 line('Output', FirstNonRepeatingCharacter::find($value));
+
+title('Missing Number');
+$numbers = [9, 6, 4, 2, 3, 5, 7, 0, 1];
+line('Input', ['numbers' => $numbers]);
+line('Output', MissingNumber::find($numbers));
+line('Output with Math', MissingNumber::findWithMath($numbers));
