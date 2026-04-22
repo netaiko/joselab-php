@@ -20,6 +20,7 @@ use JoseLab\Php\Implementations\Palindrome;
 use JoseLab\Php\Implementations\RemoveDuplicates;
 use JoseLab\Php\Implementations\ReverseArray;
 use JoseLab\Php\Implementations\ReverseString;
+use JoseLab\Php\Implementations\SearchInRotatedSortedArray;
 use JoseLab\Php\Implementations\SlidingWindowMaximumSum;
 use JoseLab\Php\Implementations\TwoSum;
 use JoseLab\Php\Implementations\ValidParentheses;
@@ -129,6 +130,12 @@ title('First Recurring Normalised Character');
 $value = 'A-b!c-a';
 line('Input', ['value' => $value]);
 line('Output', FirstRecurringNormalisedCharacter::find($value));
+
+title('Search In Rotated Sorted Array');
+$numbers = [4, 5, 6, 7, 0, 1, 2];
+$target = 0;
+line('Input', ['numbers' => $numbers, 'target' => $target]);
+line('Output', SearchInRotatedSortedArray::findIndex($numbers, $target));
 
 title('Missing Number');
 $numbers = [9, 6, 4, 2, 3, 5, 7, 0, 1];
