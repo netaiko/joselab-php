@@ -7,6 +7,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use JoseLab\Php\Implementations\BasicStringOperations;
 use JoseLab\Php\Implementations\BestTimeToBuyAndSellStock;
 use JoseLab\Php\Implementations\FirstNonRepeatingCharacter;
+use JoseLab\Php\Implementations\FirstRecurringNormalisedCharacter;
 use JoseLab\Php\Implementations\FizzBuzz;
 use JoseLab\Php\Implementations\FrequencyCount;
 use JoseLab\Php\Implementations\JumpGame;
@@ -123,6 +124,11 @@ title('First Non-Repeating Character');
 $value = 'swiss';
 line('Input', ['value' => $value]);
 line('Output', FirstNonRepeatingCharacter::find($value));
+
+title('First Recurring Normalised Character');
+$value = 'A-b!c-a';
+line('Input', ['value' => $value]);
+line('Output', FirstRecurringNormalisedCharacter::find($value));
 
 title('Missing Number');
 $numbers = [9, 6, 4, 2, 3, 5, 7, 0, 1];
