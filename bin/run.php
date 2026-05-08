@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use JoseLab\Php\Implementations\AlphabetValueCalculator;
 use JoseLab\Php\Implementations\BasicStringOperations;
 use JoseLab\Php\Implementations\BestTimeToBuyAndSellStock;
 use JoseLab\Php\Implementations\FirstNonRepeatingCharacter;
@@ -120,6 +121,11 @@ title('Basic String Operations');
 $text = 'Hello World 123!';
 line('Input', ['text' => $text]);
 line('Output', BasicStringOperations::analyse($text));
+
+title('Alphabet Value Calculator');
+$value = 'PHP 8!';
+line('Input', ['value' => $value]);
+line('Output', AlphabetValueCalculator::calculate($value));
 
 title('First Non-Repeating Character');
 $value = 'swiss';
